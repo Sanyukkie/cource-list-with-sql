@@ -39,11 +39,11 @@ export default function App() {
     <View style={styles.container}>
       <TextInput  
       style={styles.input}
-      placeholder='Title'  
+      placeholder='Product'  
       onChangeText={title => setTitle(title)}  
       value={title}/> 
       <TextInput 
-      placeholder='Credits'
+      placeholder='Amount'
       keyboardType='numeric'
       onChangeText={credit => setCredit(credit)}  
       value={credit}/>
@@ -54,7 +54,7 @@ export default function App() {
       renderItem={({item}) =>
         <View style={styles.list}>
           <Text>{item.title},{item.credits} </Text>
-          <Text style={{color: '#0000ff'}} onPress={() => deleteItem(item.id)}>done</Text>
+          <Text style={{color: '#0000ff'}} onPress={() => deleteItem(item.id)}>Bought</Text>
         </View>}        
         data={courses} 
       />
